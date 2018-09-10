@@ -2,30 +2,30 @@ var game = {
   questions: [
     {
       "id": "001",
-      "question": "What is ...1?",
-      "choices": ["Choice 1-1", "Choice 1-2", "Choice 1-3", "Choice 1-4"],
-      "correctAnswer": "Choice 1-1",
+      "question": "In what year was the first Etch a Sketch sold in the United States?",
+      "choices": ["Christmas 1955", "Halloween 1987", "Christmas 1960", "Summer 1964"],
+      "correctAnswer": "Christmas 1960",
     },
 
     {
       "id": "002",
-      "question": "What is ...2?",
-      "choices": ["Choice 2-1", "Choice 2-2", "Choice 2-3", "Choice 2-4"],
-      "correctAnswer": "Choice 2-2",
+      "question": "The Etch a Sketch as first introduced in Europe in the late 1950s.  What was it's original name?",
+      "choices": ["L'Ecran Magique", "Mechanic Granjean", "Boite Magique", "Jouet Mécanicien"],
+      "correctAnswer": "L'Ecran Magique",
     },
 
     {
       "id": "003",
-      "question": "What is ...3?",
-      "choices": ["Choice 3-1", "Choice 3-2", "Choice 3-3", "Choice 3-4"],
-      "correctAnswer": "Choice 3-3",
+      "question": "What year was the Etch A Sketch inducted into the National Toy Hall of Fame?",
+      "choices": ["2003", "1975", "1998", "1990"],
+      "correctAnswer": "1998",
     },
 
     {
       "id": "004",
-      "question": "What is ...4?",
-      "choices": ["Choice 4-1", "Choice 4-2", "Choice 4-3", "Choice 4-4"],
-      "correctAnswer": "Choice 4-4",
+      "question": "What Presidential campaign was referred to as an 'Etch A Sketch'?",
+      "choices": ["Mitt Romeny", "Donald Trump", "Bill Clinton", "Barack Obama"],
+      "correctAnswer": "Mitt Romney",
     },
   ], //end questions array
   currentIndex: 0,
