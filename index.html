@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Trivia</title>
+  <title>Trivia Quiz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--link rel="shortcut icon" href="assets/images/favicon.png"-->
   <!--Bootstrap stylesheet-->
@@ -15,6 +15,8 @@
     crossorigin="anonymous">
   <!--Custom local stylesheet for common shared elements like header and footer-->
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <!--Custom stylesheet to control clock display found here:  http://www.dwuser.com/education/content/easy-javascript-jquery-countdown-clock-builder/-->
+  <link type="text/css" rel="stylesheet" href="clock_assets/flipclock.css" />
 
   <!-- JavaScript
     ================================================== -->
@@ -26,37 +28,41 @@
 </head>
 
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <defs>
+        <symbol id="arrow" viewBox="0 0 100 100">
+          <path d="M12.5 45.83h64.58v8.33H12.5z" />
+          <path d="M59.17 77.92l-5.84-5.84L75.43 50l-22.1-22.08 5.84-5.84L87.07 50z" />
+        </symbol>
+      </defs>
+    </svg>
+
   <div class="d-flex imgContainer img-fluid align-items-center flex-column justify-content-center">
 
     <div class="d-flex flex-row align-items-start">
       <div class="col">
-        <h1 text-center>Trivia Game</h1>
+        <h1 text-center>Trivia Quiz</h1>
       </div>
     </div>
 
     <div class="d-flex flex-row align-items-center main">
       <div class="col">
         <form>
-          <fieldset>
+          <fieldset id="qfield">
             <legend id="legend"></legend>
             <div>
               <p id="question"></p>
             </div>
-
             <div id="choices"></div>
-
-            <div class="btnContainer">
-              <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                <defs>
-                  <symbol id="arrow" viewBox="0 0 100 100">
-                    <path d="M12.5 45.83h64.58v8.33H12.5z" />
-                    <path d="M59.17 77.92l-5.84-5.84L75.43 50l-22.1-22.08 5.84-5.84L87.07 50z" />
-                  </symbol>
-                </defs>
-              </svg>
-
-              <a href="#" class="button">
-                Button Text
+            <div>
+              <p id="answer"></p>
+            </div>
+            <div>
+              <p id="results"></p>
+            </div>
+              <div class="btnContainer">
+              <a href="#" id="submit" class="button">
+                Check Answer
                 <span>
                   <svg>
                     <use xlink:href="#arrow" href="#arrow"></use>
@@ -64,15 +70,24 @@
                 </span>
               </a>
             </div>
+            <div class="btnRestart d-none">
+              <a href="#" id="restart" class="button">
+                Restart
+                <span>
+                  <svg>
+                    <use xlink:href="#arrow" href="#arrow"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+  
+            <div id="display" class="display">00:00</div>
 
-          </fieldset>
+          </fieldset>  
         </form>
       </div>
-
-
-
-
     </div>
+
 
 
 
